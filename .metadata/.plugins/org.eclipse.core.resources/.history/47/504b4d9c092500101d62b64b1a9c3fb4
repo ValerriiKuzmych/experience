@@ -1,0 +1,24 @@
+package experience;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+	}
+
+	public boolean isPalindrom(String str) {
+
+		String cleaned = str.toLowerCase().replaceAll("\\s+", "");
+		StringBuilder reversedStrBuilder = new StringBuilder();
+
+		for (int i = cleaned.length() - 1; i >= 0; i--) {
+			reversedStrBuilder.append(cleaned.charAt(i));
+		}
+
+		String finalReversedStr = reversedStrBuilder.toString();
+
+		return cleaned.equals(finalReversedStr);
+
+	}
+
+}
