@@ -1,0 +1,58 @@
+package experience;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Student {
+
+	private String name;
+	private int grade;
+
+	public static Map<Integer, List<String>> sortingByRaiting(List<Student> students) {
+
+		Map<Integer, List<String>> studentsRaiting = new HashMap<>();
+
+		for (Student student : students) {
+
+			if (!studentsRaiting.containsKey(student.grade)) {
+				studentsRaiting.put(student.grade, new ArrayList<>());
+				studentsRaiting.get(student.grade).add(student.name);
+			}
+
+			studentsRaiting.get(student.grade).add(student.name);
+
+		}
+
+		return studentsRaiting;
+
+	};
+
+	public Student(String name, int grade) {
+		super();
+		this.name = name;
+		this.grade = grade;
+	}
+
+	public Student() {
+
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getGrade() {
+		return grade;
+	}
+
+	public void setGrade(int grade) {
+		this.grade = grade;
+	}
+
+}

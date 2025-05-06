@@ -8,11 +8,16 @@ public class Main {
 
 //		System.out.println(PalindromeCheck.isPalindrome("sas"));
 //		System.out.println(WordScorer.wordCounting("Java is great and Java is powerful"));
-
-		List<Student> students = List.of(new Student("Anna", 5), new Student("Boris", 4), new Student("Kate", 5),
-				new Student("Peter", 3));
-
-		System.out.println(Student.sortingByRaiting(students));
+		
+		
+		List<Student> students = List.of(
+			    new Student("Anna", 5),
+			    new Student("Boris", 4),
+			    new Student("Kate", 5),
+			    new Student("Peter", 3)
+			);
+		
+		System.out.println(Student.sortingByRaiting(students););
 
 	}
 
