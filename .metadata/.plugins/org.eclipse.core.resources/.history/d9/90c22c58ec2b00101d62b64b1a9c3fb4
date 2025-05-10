@@ -1,7 +1,6 @@
 package experience;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -10,7 +9,6 @@ public class Student {
 
 	private String name;
 	private int grade;
-	private int age;
 
 	public static Map<Integer, List<String>> sortingByRaiting(List<Student> students) {
 
@@ -30,23 +28,6 @@ public class Student {
 		return studentsRaiting;
 
 	};
-
-	public static List<Student> sortStudents(List<Student> students) {
-
-		List<Student> sortedStudents = new ArrayList<>(students);
-		sortedStudents.sort(
-				Comparator.comparing(Student::getGrade, Comparator.reverseOrder()).thenComparing(Student::getAge));
-
-		return sortedStudents;
-
-	};
-
-	public Student(String name, int grade, int age) {
-		super();
-		this.name = name;
-		this.grade = grade;
-		this.age = age;
-	}
 
 	public Student(String name, int grade) {
 		super();
@@ -74,17 +55,4 @@ public class Student {
 		this.grade = grade;
 	}
 
-	public int getAge() {
-		return age;
-	}
-
-	public void setAge(int age) {
-		this.age = age;
-	}
-
-	@Override
-	public String toString() {
-
-		return super.toString();
-	}
 }

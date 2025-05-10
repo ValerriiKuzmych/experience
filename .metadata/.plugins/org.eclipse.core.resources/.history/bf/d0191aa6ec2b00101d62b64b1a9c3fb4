@@ -32,21 +32,11 @@ public class Student {
 	};
 
 	public static List<Student> sortStudents(List<Student> students) {
+		students.sort(Comparator.comparing(Student::getGrade).thenComparing(Student::getAge));
 
-		List<Student> sortedStudents = new ArrayList<>(students);
-		sortedStudents.sort(
-				Comparator.comparing(Student::getGrade, Comparator.reverseOrder()).thenComparing(Student::getAge));
-
-		return sortedStudents;
+		return students;
 
 	};
-
-	public Student(String name, int grade, int age) {
-		super();
-		this.name = name;
-		this.grade = grade;
-		this.age = age;
-	}
 
 	public Student(String name, int grade) {
 		super();
@@ -80,11 +70,5 @@ public class Student {
 
 	public void setAge(int age) {
 		this.age = age;
-	}
-
-	@Override
-	public String toString() {
-
-		return super.toString();
 	}
 }

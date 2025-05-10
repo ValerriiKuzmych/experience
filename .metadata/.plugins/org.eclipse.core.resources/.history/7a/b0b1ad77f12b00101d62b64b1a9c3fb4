@@ -37,7 +37,7 @@ public class Student {
 		sortedStudents.sort(
 				Comparator.comparing(Student::getGrade, Comparator.reverseOrder()).thenComparing(Student::getAge));
 
-		return sortedStudents;
+		return students;
 
 	};
 
