@@ -14,14 +14,17 @@ public class Main {
 //
 //		System.out.println(Student.sortingByRaiting(students));
 
-		List<Student> students = List.of(new Student("Anna", 5, 21), new Student("Boris", 4, 22),
-				new Student("Kate", 5, 19), new Student("Peter", 3, 24));
+//		List<Student> students = List.of(new Student("Anna", 5, 21), new Student("Boris", 4, 22),
+//				new Student("Kate", 5, 19), new Student("Peter", 3, 24));
+//
+//		for (Student student : Student.sortStudents(students)) {
+//
+//			System.out.println(student.getName() + " Grade " + student.getGrade() + " Age " + student.getAge());
+//
+//		}
 
-		for (Student student : Student.sortStudents(students)) {
-
-			System.out.println(student.getName() + " Grade " + student.getGrade() + " Age " + student.getAge());
-
-		}
+		System.out.println(WordScorer
+				.getMostCommonWords(List.of("Java is cool", "Java and Spring", "Spring is powerful", "I love Java")));
 
 	}
 

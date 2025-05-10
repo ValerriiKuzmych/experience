@@ -32,13 +32,13 @@ public class WordScorer {
 
 		for (String message : messages) {
 
-			message = message.toLowerCase().replaceAll("[^a-z\\s]", "");
+			message = message.toLowerCase().replaceAll("[^a-z]", "");
 
 			String[] words = message.split("\\s+");
 
 			for (String word : words) {
 
-				if (!stopWords.contains(word) && !word.isBlank()) {
+				if (!stopWords.contains(word) && word.isBlank()) {
 
 					wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
 
