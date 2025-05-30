@@ -47,7 +47,7 @@ public class WordScorer {
 
 		}
 		return wordCount.entrySet().stream().sorted((a, b) -> b.getValue().compareTo(a.getValue())).limit(3)
-				.map(Map.Entry::getKey).collect(Collectors.toList());
+				.map(entry -> entry.getKey() + ": " + entry.getValue()).collect(Collectors.toList());
 	}
 
 }
