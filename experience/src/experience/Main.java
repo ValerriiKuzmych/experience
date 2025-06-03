@@ -1,7 +1,5 @@
 package experience;
 
-import java.util.Arrays;
-
 public class Main {
 
 	public static void main(String[] args) {
@@ -26,9 +24,11 @@ public class Main {
 //		System.out.println(WordScorer
 //				.getMostCommonWords(List.of("Java is cool", "Java and Spring", "Spring is powerful", "I love Java")));
 
-		Integer[] IntegerList = { 1, 2, 2, 3, 4, 4, 5 };
+		int[] IntegerList = { 1, 2, 2, 3, 4, 4, 5 };
 
-		System.out.println(UniqValueService.uniqValueMaker(Arrays.asList(IntegerList)));
+		for (int i : UniqValueService.uniqueValues(IntegerList)) {
+			System.out.println(UniqValueService.uniqueValues(IntegerList)[i - 1]);
+		}
 
 	}
 
