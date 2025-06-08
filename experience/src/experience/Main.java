@@ -24,11 +24,13 @@ public class Main {
 //		System.out.println(WordScorer
 //				.getMostCommonWords(List.of("Java is cool", "Java and Spring", "Spring is powerful", "I love Java")));
 
-		int[] IntegerList = { 1, 2, 2, 3, 4, 4, 5 };
-
-		for (int i : UniqValueService.uniqueValues(IntegerList)) {
-			System.out.println(UniqValueService.uniqueValues(IntegerList)[i - 1]);
-		}
+//		int[] IntegerList = { 1, 2, 2, 3, 4, 4, 5 };
+//
+//		for (int i : UniqValueService.uniqueValues(IntegerList)) {
+//			System.out.println(UniqValueService.uniqueValues(IntegerList)[i - 1]);
+//		}
+		String[] words = { "apple", "banana", "apple", "orange", "banana", "apple" };
+		System.out.println(WordScorer.wordScoring(words));
 
 	}
 
