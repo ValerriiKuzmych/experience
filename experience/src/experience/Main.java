@@ -1,5 +1,7 @@
 package experience;
 
+import java.util.List;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -29,8 +31,14 @@ public class Main {
 //		for (int i : UniqValueService.uniqueValues(IntegerList)) {
 //			System.out.println(UniqValueService.uniqueValues(IntegerList)[i - 1]);
 //		}
-		String[] words = { "apple", "banana", "apple", "orange", "banana", "apple" };
-		System.out.println(WordScorer.wordScoring(words));
+//		String[] words = { "apple", "banana", "apple", "orange", "banana", "apple" };
+//		System.out.println(WordScorer.wordScoring(words));
+
+//		List<Integer> integerList = List.of(3, 4, 7, 2, 8, 5);
+//
+//		System.out.println(StreamAPI.evenNumbersSelectingSquaringSorting(integerList));
+		List<User> users = List.of(new User("Alice", "alice@mail.com"), new User("Bob", "bob@mail.com"));
+		System.out.println(OptionalService.findUserNameByEmail(users, "ice@mail.com"));
 
 	}
 
