@@ -37,8 +37,12 @@ public class Main {
 //		List<Integer> integerList = List.of(3, 4, 7, 2, 8, 5);
 //
 //		System.out.println(StreamAPI.evenNumbersSelectingSquaringSorting(integerList));
-		List<User> users = List.of(new User("Alice", "alice@mail.com"), new User("Bob", "bob@mail.com"));
-		System.out.println(OptionalService.findUserNameByEmail(users, "ice@mail.com"));
+//		List<User> users = List.of(new User("Alice", "alice@mail.com"), new User("Bob", "bob@mail.com"));
+//		System.out.println(OptionalService.findUserNameByEmail(users, "ice@mail.com"));
+
+		List<Shape> shapes = List.of(new Rectangle(5, 6), new Circle(15));
+
+		ShapeService.printAreas(shapes);
 
 	}
 
