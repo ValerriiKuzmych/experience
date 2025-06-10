@@ -2,6 +2,11 @@ package experience;
 
 import java.util.List;
 
+import experience.taskmanager.RegularTask;
+import experience.taskmanager.Task;
+import experience.taskmanager.TaskManager;
+import experience.taskmanager.UrgentTask;
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -40,9 +45,12 @@ public class Main {
 //		List<User> users = List.of(new User("Alice", "alice@mail.com"), new User("Bob", "bob@mail.com"));
 //		System.out.println(OptionalService.findUserNameByEmail(users, "ice@mail.com"));
 
-		List<Shape> shapes = List.of(new Rectangle(5, 6), new Circle(15));
+//		
+		TaskManager manager = new TaskManager();
+		manager.addTask(new RegularTask(1L, "Do homework"));
+		manager.addTask(new UrgentTask(2L, "Fix prod", 3));
 
-		ShapeService.printAreas(shapes);
+		List<Task> sorted = manager.getSortedTasksByPriority();
 
 	}
 
